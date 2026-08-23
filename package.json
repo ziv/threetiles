@@ -1,0 +1,73 @@
+{
+  "name": "threetiles",
+  "version": "0.1.0",
+  "description": "Geo-spatial terrain streaming engine for three.js",
+  "author": "Ziv Perry",
+  "license": "MIT OR Apache-2.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziv/threetiles.git"
+  },
+  "homepage": "https://github.com/ziv/threetiles#readme",
+  "bugs": {
+    "url": "https://github.com/ziv/threetiles/issues"
+  },
+  "funding": "https://github.com/sponsors/ziv",
+  "keywords": [
+    "three",
+    "threejs",
+    "terrain",
+    "gis",
+    "streaming",
+    "heightmap",
+    "geospatial",
+    "elevation",
+    "terrarium"
+  ],
+  "main": "./dist/threetiles.js",
+  "module": "./dist/threetiles.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/threetiles.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src",
+    "assets/icon.png",
+    "LICENSE-MIT",
+    "LICENSE-APACHE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:lib": "vite build -c vite.lib.config.ts && tsc -p tsconfig.lib.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm test && npm run build:lib"
+  },
+  "peerDependencies": {
+    "three": ">=0.160"
+  },
+  "devDependencies": {
+    "@types/three": "^0.185.0",
+    "three": "^0.185.1",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0",
+    "vitest": "^3.2.0"
+  }
+}
