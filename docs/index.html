@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>threetiles demo</title>
+  <link rel="icon" href="./assets/icon-BQHq1rBt.png">
+  <style>
+    html, body { margin: 0; height: 100%; background: #66bfff; overflow: hidden; }
+    #threetiles { display: block; width: 100%; height: 100%; outline: none; }
+    .text { position: absolute; color: #fff; font-family: system-ui, sans-serif; white-space: pre; pointer-events: none;
+            text-shadow: 0 1px 2px rgba(0,0,0,.6); }
+    #loading { left: 38%; top: 45%; font-size: 42px; }
+    #hud { left: 10px; top: 10px; font-size: 16px; line-height: 1.3; }
+    #crash { left: 30%; top: 40%; font-size: 36px; display: none; }
+    #help {
+      position: fixed; left: 12px; bottom: 12px; padding: 6px 10px;
+      font: 13px/1.4 system-ui, sans-serif; color: #fff;
+      background: rgba(0,0,0,.45); border-radius: 6px; pointer-events: none;
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-BujyB6Mr.js"></script>
+</head>
+<body>
+  <canvas id="threetiles" tabindex="0"></canvas>
+  <div id="loading" class="text">Loading... 0%</div>
+  <div id="hud" class="text"></div>
+  <div id="crash" class="text">You crashed! Press R to reset.</div>
+  <div id="help">A/D roll · Q/E yaw · W/S pitch · +/- throttle · R reset</div>
+</body>
+</html>
