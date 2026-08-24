@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/ziv/threetiles/compare/v0.1.1...v0.1.2) (2026-08-24)
+
+
+### Bug Fixes
+
+* align lock ([584053c](https://github.com/ziv/threetiles/commit/584053c13cdf71e9fd974c5e39dce60f1ad970dc))
+
 ## [0.1.1](https://github.com/ziv/threetiles/compare/v0.1.0...v0.1.1) (2026-08-23)
 
 

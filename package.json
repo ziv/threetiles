@@ -1,6 +1,6 @@
 {
   "name": "threetiles",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Geo-spatial terrain streaming engine for three.js",
   "author": "Ziv Perry",
   "license": "MIT OR Apache-2.0",
