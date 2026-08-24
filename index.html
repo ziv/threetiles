@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>threetiles demo</title>
   <link rel="icon" href="./assets/icon.png">
   <style>
     html, body { margin: 0; height: 100%; background: #66bfff; overflow: hidden; }
-    #threetiles { display: block; width: 100%; height: 100%; outline: none; }
+    #threetiles {
+      display: block; width: 100%; height: 100%; outline: none;
+      touch-action: none; user-select: none; -webkit-user-select: none;
+    }
     .text { position: absolute; color: #fff; font-family: system-ui, sans-serif; white-space: pre; pointer-events: none;
             text-shadow: 0 1px 2px rgba(0,0,0,.6); }
     #loading { left: 38%; top: 45%; font-size: 42px; }
@@ -18,6 +21,13 @@
       font: 13px/1.4 system-ui, sans-serif; color: #fff;
       background: rgba(0,0,0,.45); border-radius: 6px; pointer-events: none;
     }
+    #place {
+      position: fixed; right: 12px; top: 12px; padding: 6px 10px;
+      font: 14px system-ui, sans-serif; color: #fff;
+      background: rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.4);
+      border-radius: 6px; outline: none;
+    }
+    #place option { color: #000; }
   </style>
 </head>
 <body>
@@ -26,6 +36,7 @@
   <div id="hud" class="text"></div>
   <div id="crash" class="text">You crashed! Press R to reset.</div>
   <div id="help">A/D roll · Q/E yaw · W/S pitch · +/- throttle · R reset</div>
+  <select id="place" aria-label="Fly somewhere else"></select>
   <script type="module" src="./demo/main.ts"></script>
 </body>
 </html>
